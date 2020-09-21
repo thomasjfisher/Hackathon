@@ -68,11 +68,12 @@ game container info_________________________________________________ */
 }
 
 .row{
-  margin: auto;
+  /* margin: auto;
   padding: auto;
   position: relative;
   bottom: -350px;
-  display: flex;
+  display: flex; */
+  text-align: center;
 }
 .column{
   margin: auto;
