@@ -3,18 +3,14 @@
 })()
 
 
+// let arrowUp = document.getElementById("up");
 
-var c = document.getElementById("gameCanvas");
-var ctx = c.getContext("2d");
-// Create gradient
-var grd = ctx.createLinearGradient(0,0,200,0);
-grd.addColorStop(0,"white");
-grd.addColorStop(1,"white");
-// Fill with gradient
-ctx.fillStyle = grd;
-ctx.fillRect(10,10,150,80);
+//STATIC ARROWS
 
 
+//1. start button to trigger game
+//2. the static buttons in the game div (bottom) > buttons (canvas)
+//3. Generating arrows randomly at the top (in set positions and floating down to their respective arrow)
 
 
 
