@@ -1,3 +1,4 @@
+
 /* Home page body */
 body {
   background:white;
@@ -52,20 +53,22 @@ canvas {
 #icons {
  background-color: white;
 }
-.fa-arrow-up{
-  color: red;
-}
-
 
 
 .row{
   margin: auto;
   padding: auto;
-  
+  position: relative;
+  bottom: -650px
+ 
 }
 .column{
   margin: auto;
   column-width: 100px;
+  background-color: yellow;
+
   
 }
+
+
 
