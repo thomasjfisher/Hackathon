@@ -1,74 +1,92 @@
-
-/* Home page body */
+/* Home page body including main image________________________________*/
 body {
   background:white;
-  background-image: url('arrow_backg.jpg');
+  background-image: url('arrow_backg.jpg'); ;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  
 }
 
-/* Home page header text */
+/* Home page header text ____________________________________________*/
 h1 {
   text-align: center;
   font-family: 'Press Start 2P', cursive;
+  text-shadow: 1px 1px 2px white, 0 0 15px pink, 0 0 5px palevioletred;
   color: white;
   padding-top: 25px; 
   padding-bottom: 25px;
 }
 
-/* home page header background */ 
+/* home page header background ________________________________________*/ 
 .heading{
   background-color: black;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  text-align: center;
+  padding-bottom: 15px;
 }
 
-/* home page footer */
+/* home page footer____________________________________________________ */
 footer{
   font-family: 'Press Start 2P', cursive;
   font-size: 10px;
   color:white; 
   text-align: center;
+  position: relative;
+  bottom: -25px;
 }
 /* 
-game container info */
+game container info_________________________________________________ */
+
+
+.start-btn{
+  text-align: center;
+  font-family: 'Press Start 2P';
+  display: inline-block;
+  margin:5px;
+  font-weight: bold;
+  padding: 10px 0 10px 10px ;
+  background-color: lightgray;
+  text-shadow: -1px -1px black, 1px 1px white;
+  color: gray;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: 0 .2em gray; 
+  cursor: pointer;
+}
 
 .game{
-  min-height: 100vh; 
+  height: 700px;
+  width: 60%;
   background-color: white; 
-  opacity: 0.5; 
+  background: rgba(7, 7, 7, 0.4);
   margin: auto;
+ 
 }
-
-#gameContainer {}
-/* 
-canvas {
-  background: #f8f8f8;
-  opacity: 0.5;
-  padding: 0;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-  display: block;
-} */
-
-#icons {
- background-color: white;
-}
-
 
 .row{
   margin: auto;
   padding: auto;
   position: relative;
-  bottom: -650px
- 
+  bottom: -630px
 }
 .column{
   margin: auto;
   column-width: 100px;
-  background-color: yellow;
-
-  
+  text-align: center;
+  border-top: 5px solid rgb(247, 94, 209);
 }
 
+/* Favcons ________________________________________________________*/
+
+.fa-arrow-circle-left, .fa-arrow-circle-up, .fa-arrow-circle-down, .fa-arrow-circle-right{
+  color: rgb(62, 179, 233);
+  font-size: 55px;
+  padding-top: 5px;
+  text-shadow: 1px 1px 2px white, 0 0 15px pink, 0 0 5px palevioletred;
+}
 
 
