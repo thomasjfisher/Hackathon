@@ -1,15 +1,49 @@
-h1 {
-  text-align: center;
-}
-#gameContainer {}
+/* Home page body */
 body {
   background:white;
-  color: #f8f8f8;
+  background-image: url('arrow_backg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
+/* Home page header text */
+h1 {
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  padding-top: 25px; 
+  padding-bottom: 25px;
+}
+
+/* home page header background */ 
+.heading{
+  background-color: black;
+}
+
+/* home page footer */
+footer{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  color:white; 
+  text-align: center;
+}
+/* 
+game container info */
+
+#gameContainer {}
+
 canvas {
   background: #f8f8f8;
+  opacity: 0.5;
   padding: 0;
   margin: 0 auto;
   margin-bottom: 1rem;
   display: block;
 }
+
+.opClass {
+  opacity:0.4;
+  filter:alpha(opacity=40); 
+}
+
