@@ -71,11 +71,12 @@ game container info_________________________________________________ */
   margin: auto;
   padding: auto;
   position: relative;
-  bottom: -630px
+  bottom: -350px;
+  display: flex;
 }
 .column{
   margin: auto;
-  column-width: 100px;
+  width: 25%;
   text-align: center;
   border-top: 5px solid rgb(247, 94, 209);
 }
@@ -89,4 +90,27 @@ game container info_________________________________________________ */
   text-shadow: 1px 1px 2px white, 0 0 15px pink, 0 0 5px palevioletred;
 }
 
-
+#leftGameArrow{
+  position: relative;
+  left: 100px;
+  top: 0px;
+}
+#rightGameArrow{
+  position: relative;
+  left: 250px;
+  top: -67px;
+}
+#upGameArrow{
+  position: relative;
+  left: 450px;
+  top: -133px;
+}
+#downGameArrow{
+  position: relative;
+  left: 650px;
+  top: -200px;
+}
+@keyframes leftGameArrow{
+  from {top: 0px;}
+  to {top: 200px;}
+}
