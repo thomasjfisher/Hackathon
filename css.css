@@ -64,3 +64,13 @@ p{
   font-size: 50px;
 }
 
+.row{
+  margin: auto;
+  padding: auto;
+  
+}
+.column{
+  margin: auto;
+  column-width: 100px;
+}
+
