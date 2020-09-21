@@ -32,17 +32,14 @@ footer{
 game container info */
 
 .game{
-  height: 600px; 
+  min-height: 100vh; 
   background-color: white; 
   opacity: 0.5; 
-  margin-left: 450px; 
-  margin-right: 450px;
-   margin-top: 40px; 
-   margin-bottom: 40px"
+  margin: auto;
 }
 
 #gameContainer {}
-
+/* 
 canvas {
   background: #f8f8f8;
   opacity: 0.5;
@@ -50,7 +47,7 @@ canvas {
   margin: 0 auto;
   margin-bottom: 1rem;
   display: block;
-}
+} */
 
 #icons {
  background-color: white;
@@ -59,10 +56,7 @@ canvas {
   color: red;
 }
 
-p{
-  color: blueviolet;
-  font-size: 50px;
-}
+
 
 .row{
   margin: auto;
@@ -72,5 +66,6 @@ p{
 .column{
   margin: auto;
   column-width: 100px;
+  
 }
 
