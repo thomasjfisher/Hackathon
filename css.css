@@ -1,7 +1,7 @@
 /* Home page body including main image________________________________*/
 body {
   background:white;
-  background-image: url('arrow_backg.jpg'); ;
+  background-image: url('./imgs/arrow_backg.jpg'); ;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -91,7 +91,7 @@ game container info_________________________________________________ */
   text-shadow: 1px 1px 2px white, 0 0 15px pink, 0 0 5px palevioletred;
 }
 
-#leftGameArrow{
+/* #leftGameArrow{
   position: relative;
   left: 100px;
   top: 0px;
@@ -110,8 +110,8 @@ game container info_________________________________________________ */
   position: relative;
   left: 650px;
   top: -200px;
-}
-@keyframes leftGameArrow{
+} */
+@keyframes fallingLeft{
   from {top: 0px;}
-  to {top: 200px;}
+  to {top: 600px;}
 }

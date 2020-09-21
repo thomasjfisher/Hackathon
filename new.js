@@ -4,11 +4,12 @@
 
 // game width is x 255px; y 960px;
 
-var leftGameArrow = document.getElementById("staticLeft.png")
+var leftGameArrow = document.getElementById("fallingLeft")
 var rightGameArrow = document.getElementById("staticLeft.png")
 var upGameArrow = document.getElementById("staticLeft.png")
 var downGameArrow = document.getElementById("staticLeft.png")
-leftGameArrow.style.left = '100px'
+// console.log(leftGameArrow)
+// leftGameArrow.style.left = '100px'
 // let arrowUp = document.getElementById("up");
 
 
