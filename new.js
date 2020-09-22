@@ -67,7 +67,6 @@ function keyInput(arrowName) {
   document.addEventListener('keydown', function(arrowName, e){
   console.log(arrowName.id) 
   //compare the event key pressed with the arrow id =1
-  // loop ends after 20 times
   }.bind(this, arrowName));
  }
   
