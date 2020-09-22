@@ -1,7 +1,3 @@
-;(function () {
-  console.log('IIFE JS Loaded!')
-})()
-
 // game width is x 255px; y 960px;
 
 var leftGameArrow = document.getElementById("fallingLeft")
@@ -9,6 +5,7 @@ var rightGameArrow = document.getElementById("fallingRight")
 var upGameArrow = document.getElementById("fallingUp")
 var downGameArrow = document.getElementById("fallingDown")
 let count = 0
+var score = 0
 
 
 // var currentPositionX = 0;
@@ -18,25 +15,54 @@ let count = 0
 //   currentPositionX = document.getElementById("box").getBoundingClientRect().left - moveAmount;
 //   document.getElementById("box").style.transform = `translate(${currentPositionX}%, ${currentPositionY}%)`;
 // }
+// var someEventHander=function(){
+// 	console.log(event,arrowName);
+// }
+// //add listener
+// document.getElementById("someid").addEventListener('click',someEventHander.bind(event,arrowName));
 
-
+// // yes.onclick
 function newGame() {
-  // begin arrows falling
+  arrowsFalling();
 }
 
+document.getElementById('newGame').addEventListener('click', addStash);
+
+
 function arrowsFalling(arrowName) {
-  if (count < 540){
+  if (count < 700){
     count += 20
+    arrowName.style.marginTop = count + 'px';
+  } else {
+    keyInput(arrowName)
+    keyInputNands(arrowName)
   }
-  arrowName.style.marginTop = count + 'px';
-  // move position down by 20px
-  //increment by 20 each time
+  
+}
+function logKey(e,arrowName) {
+  console.log(arrowName)// if event.code matches(===) the arrow name, success, else, misscon
+  console.log(e)
+}
+
+// function keyInput(arrowName) {
+// document.addEventListener('keydown', logKey.bind("arrowName"));
+}
+
+
+// Nands test code:
+
+function keyInput(arrowName) {
+  document.addEventListener('keydown', (e, arrowName) => {
+  console.log(arrowName) //check if we get the arrow Name here?
+  });
+ }
+  
+NandsarrowNameconsole.log(arrowName) //check if we get the arrow Name here?  
 
   //if arrow reaches certain position, stop moving it (if statement)
 //  if arrowName.style.marginTop = 540px{
 //    break
 //  }
-}
 
 function generateRandomArrow() {
   return leftGameArrow
@@ -48,7 +74,7 @@ setInterval(function(){
   // pass randomArrow to arrowsFalling function
   let randomArrow = generateRandomArrow()
   arrowsFalling(randomArrow)
-}, 1000);
+}, 50);
 
 
 // setInterval -> every second

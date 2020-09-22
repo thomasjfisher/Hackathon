@@ -18,20 +18,20 @@
 
     <div class="heading"> 
     <h1>Keyboard Warriors</h1>
-    <button onClick="newGame()">New Game</button>
-    <span class='start-btn'>New Game</span>
+    <button onClick="newGame()" id="newGameButton">New Game</button>
+    <!-- <span class='start-btn'>New Game</span> -->
     <span>|  SCORE:</span>
     </div>
    
 
     <div class="game">
-        <div class="row" style="min-height: 600px;">
+        <div class="row" style="min-height: 600px; max-height: 600px;">
             <div class="col-md-3"><img src="imgs/lh_left.png" id="fallingLeft"></div>
             <div class="col-md-3"><img src="imgs/lh_up.png" id="fallingUp"></div>
             <div class="col-md-3"><img src="imgs/lh_down.png" id="fallingDown"></i></div>
             <div class="col-md-3"><img src="imgs/lh_right.png" id="fallingRight"></i></div>
             </div>
-            <div class="row" style="margin: auto; padding:auto; position:sticky; bottom: -870px; display:flex">
+            <div class="row" style="margin: auto; padding:auto; position:sticky; bottom: -870px; display:flex; z-index: -1;">
             <div class="col-md-3"><i class="fas fa-arrow-circle-left"></i></div>
             <div class="col-md-3"><i class="fas fa-arrow-circle-up"></i></div>
             <div class="col-md-3"><i class="fas fa-arrow-circle-down"></i></div>
