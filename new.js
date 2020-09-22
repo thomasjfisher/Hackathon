@@ -6,7 +6,7 @@ var upGameArrow = document.getElementById("fallingUp")
 var downGameArrow = document.getElementById("fallingDown")
 let count = 0
 var score = 0
-let startNewGame = document.getElementById("newGameButton")
+// let startNewGame = document.getElementById("newGameButton")
 
 // var currentPositionX = 0;
 // var currentPositionY = 0;
@@ -22,9 +22,15 @@ let startNewGame = document.getElementById("newGameButton")
 // document.getElementById("someid").addEventListener('click',someEventHander.bind(event,arrowName));
 
 // // yes.onclick
-// function newGame() {
-//   arrowsFalling();
-// }
+function newGame() {
+    setInterval(function(){ 
+        // choose randomArrow
+        // pass randomArrow to arrowsFalling function
+        let randomArrow = generateRandomArrow()
+        arrowsFalling(randomArrow)
+      }, 50);
+  
+}
 
 // startNewGame.addEventListener('click', function (){
 //   arrowsFalling();
@@ -74,12 +80,7 @@ function generateRandomArrow() {
   //Array of arrows
 }
 
-setInterval(function(){ 
-  // choose randomArrow
-  // pass randomArrow to arrowsFalling function
-  let randomArrow = generateRandomArrow()
-  arrowsFalling(randomArrow)
-}, 50);
+
 
 
 // setInterval -> every second
