@@ -25,12 +25,17 @@ function newGame() {
 }
 
 function arrowsFalling(arrowName) {
+  if (count < 540){
+    count += 20
+  }
+  arrowName.style.marginTop = count + 'px';
   // move position down by 20px
   //increment by 20 each time
-  count += 20
-  arrowName.style.marginTop = count + 'px';
+
   //if arrow reaches certain position, stop moving it (if statement)
- 
+//  if arrowName.style.marginTop = 540px{
+//    break
+//  }
 }
 
 function generateRandomArrow() {
