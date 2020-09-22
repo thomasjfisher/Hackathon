@@ -6,7 +6,7 @@ var upGameArrow = document.getElementById("fallingUp")
 var downGameArrow = document.getElementById("fallingDown")
 let count = 0
 var score = 0
-
+let startNewGame = document.getElementById("newGameButton")
 
 // var currentPositionX = 0;
 // var currentPositionY = 0;
@@ -22,42 +22,47 @@ var score = 0
 // document.getElementById("someid").addEventListener('click',someEventHander.bind(event,arrowName));
 
 // // yes.onclick
-function newGame() {
-  arrowsFalling();
-}
+// function newGame() {
+//   arrowsFalling();
+// }
 
-document.getElementById('newGame').addEventListener('click', addStash);
+// startNewGame.addEventListener('click', function (){
+//   arrowsFalling();
+// });
+
+
+// document.getElementById('newGame').addEventListener('click', addStash);
 
 
 function arrowsFalling(arrowName) {
   if (count < 700){
     count += 20
     arrowName.style.marginTop = count + 'px';
-  } else {
-    keyInput(arrowName)
-    keyInputNands(arrowName)
-  }
+  // } else {
+  //   keyInput(arrowName)
+  //   keyInputNands(arrowName)
+  // }
   
 }
-function logKey(e,arrowName) {
-  console.log(arrowName)// if event.code matches(===) the arrow name, success, else, misscon
-  console.log(e)
+// function logKey(e,arrowName) {
+//   console.log(arrowName)// if event.code matches(===) the arrow name, success, else, misscon
+//   console.log(e)
 }
 
 // function keyInput(arrowName) {
 // document.addEventListener('keydown', logKey.bind("arrowName"));
-}
+
 
 
 // Nands test code:
 
-function keyInput(arrowName) {
-  document.addEventListener('keydown', (e, arrowName) => {
-  console.log(arrowName) //check if we get the arrow Name here?
-  });
- }
+// function keyInput(arrowName) {
+//   document.addEventListener('keydown', (e, arrowName) => {
+//   console.log(arrowName) //check if we get the arrow Name here?
+//   });
+//  }
   
-NandsarrowNameconsole.log(arrowName) //check if we get the arrow Name here?  
+// NandsarrowNameconsole.log(arrowName) //check if we get the arrow Name here?  
 
   //if arrow reaches certain position, stop moving it (if statement)
 //  if arrowName.style.marginTop = 540px{
