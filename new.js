@@ -8,7 +8,7 @@ var leftGameArrow = document.getElementById("fallingLeft")
 var rightGameArrow = document.getElementById("fallingRight")
 var upGameArrow = document.getElementById("fallingUp")
 var downGameArrow = document.getElementById("fallingDown")
-
+let count = 0
 
 
 // var currentPositionX = 0;
@@ -25,8 +25,12 @@ function newGame() {
 }
 
 function arrowsFalling(arrowName) {
-  // move position down by 20px 
-  distance from top
+  // move position down by 20px
+  //increment by 20 each time
+  count += 20
+  leftGameArrow.style.marginTop = count + 'px';
+  //if arrow reaches certain position, stop moving it (if statement)
+ 
 }
 
 function generateRandomArrow() {
