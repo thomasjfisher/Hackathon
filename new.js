@@ -78,10 +78,9 @@ function arrowsFalling(arrowName) {
 function generateRandomArrow() {
   return leftGameArrow
   //Array of arrows
+//   var randomArrow = arrowArray[Math.floor(Math.random()*arrowArray.length)];
+// return randomArrow;
 }
-
-
-
 
 // setInterval -> every second
 // choose a random Array
