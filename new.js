@@ -5,9 +5,54 @@
 // game width is x 255px; y 960px;
 
 var leftGameArrow = document.getElementById("fallingLeft")
-var rightGameArrow = document.getElementById("staticLeft.png")
-var upGameArrow = document.getElementById("staticLeft.png")
-var downGameArrow = document.getElementById("staticLeft.png")
+var rightGameArrow = document.getElementById("fallingRight")
+var upGameArrow = document.getElementById("fallingUp")
+var downGameArrow = document.getElementById("fallingDown")
+
+
+
+// var currentPositionX = 0;
+// var currentPositionY = 0;
+
+// function moveLeft(){
+//   currentPositionX = document.getElementById("box").getBoundingClientRect().left - moveAmount;
+//   document.getElementById("box").style.transform = `translate(${currentPositionX}%, ${currentPositionY}%)`;
+// }
+
+
+function newGame() {
+  // begin arrows falling
+}
+
+function arrowsFalling(arrowName) {
+  // move position down by 20px 
+  distance from top
+}
+
+function generateRandomArrow() {
+  return leftGameArrow
+  //Array of arrows
+}
+
+setInterval(function(){ 
+  // choose randomArrow
+  // pass randomArrow to arrowsFalling function
+  let randomArrow = generateRandomArrow()
+  arrowsFalling(randomArrow)
+}, 1000);
+
+
+// setInterval -> every second
+// choose a random Array
+//drop arrow down certain pixel
+
+
+// let currentPositionY = document.getElementById("fallingLeft").getBoundingClientRect().top
+// let currentPositionY++
+// // console.log(current vertical position is: currentPositionY);
+// console.log(currentPositionY)
+
+
 // console.log(leftGameArrow)
 // leftGameArrow.style.left = '100px'
 // let arrowUp = document.getElementById("up");
