@@ -6,6 +6,7 @@ var upGameArrow = document.getElementById("fallingUp")
 var downGameArrow = document.getElementById("fallingDown")
 let count = 0
 var score = 0
+var arrowArray = [leftGameArrow, rightGameArrow, upGameArrow, downGameArrow];
 // let startNewGame = document.getElementById("newGameButton")
 
 // var currentPositionX = 0;
@@ -44,16 +45,16 @@ function arrowsFalling(arrowName) {
   if (count < 700){
     count += 20
     arrowName.style.marginTop = count + 'px';
-  // } else {
-  //   keyInput(arrowName)
-  //   keyInputNands(arrowName)
-  // }
+  } else {
+    keyInput(arrowName)
+  
+  }
   
 }
 // function logKey(e,arrowName) {
 //   console.log(arrowName)// if event.code matches(===) the arrow name, success, else, misscon
 //   console.log(e)
-}
+
 
 // function keyInput(arrowName) {
 // document.addEventListener('keydown', logKey.bind("arrowName"));
@@ -62,11 +63,13 @@ function arrowsFalling(arrowName) {
 
 // Nands test code:
 
-// function keyInput(arrowName) {
-//   document.addEventListener('keydown', (e, arrowName) => {
-//   console.log(arrowName) //check if we get the arrow Name here?
-//   });
-//  }
+function keyInput(arrowName) {
+  document.addEventListener('keydown', function(arrowName, e){
+  console.log(arrowName.id) 
+  //compare the event key pressed with the arrow id =1
+  // loop ends after 20 times
+  }.bind(this, arrowName));
+ }
   
 // NandsarrowNameconsole.log(arrowName) //check if we get the arrow Name here?  
 
@@ -76,10 +79,10 @@ function arrowsFalling(arrowName) {
 //  }
 
 function generateRandomArrow() {
-  return leftGameArrow
-  //Array of arrows
-//   var randomArrow = arrowArray[Math.floor(Math.random()*arrowArray.length)];
-// return randomArrow;
+
+var randomArrow = Math.floor(Math.random() * arrowArray.length);
+     return arrowArray[randomArrow]
+
 }
 
 // setInterval -> every second
