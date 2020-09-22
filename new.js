@@ -28,7 +28,7 @@ function arrowsFalling(arrowName) {
   // move position down by 20px
   //increment by 20 each time
   count += 20
-  leftGameArrow.style.marginTop = count + 'px';
+  arrowName.style.marginTop = count + 'px';
   //if arrow reaches certain position, stop moving it (if statement)
  
 }
