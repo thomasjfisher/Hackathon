@@ -4,9 +4,11 @@ var leftGameArrow = document.getElementById("fallingLeft")
 var rightGameArrow = document.getElementById("fallingRight")
 var upGameArrow = document.getElementById("fallingUp")
 var downGameArrow = document.getElementById("fallingDown")
+var randomArrow 
 let count = 0
 var score = 0
 var arrowArray = [leftGameArrow, rightGameArrow, upGameArrow, downGameArrow];
+var pushedArrows = []
 // let startNewGame = document.getElementById("newGameButton")
 
 // var currentPositionX = 0;
@@ -27,30 +29,50 @@ function newGame() {
     setInterval(function(){ 
         // choose randomArrow
         // pass randomArrow to arrowsFalling function
-        let randomArrow = generateRandomArrow()
+        randomArrow = generateRandomArrow()
         arrowsFalling(randomArrow)
-      }, 50);
+      }, 500);
   
 }
-
-// startNewGame.addEventListener('click', function (){
-//   arrowsFalling();
-// });
-
-
-// document.getElementById('newGame').addEventListener('click', addStash);
-
 
 function arrowsFalling(arrowName) {
-  if (count < 700){
+    pushedArrows.push(arrowName)
+    console.log(pushedArrows)
+    if (count < 749){
     count += 20
-    arrowName.style.marginTop = count + 'px';
-  } else {
-    keyInput(arrowName)
+    // check if it is the first arrow, then we can retain whatever we have got (arrow name passed)
+    // var that keeps track of arrow count
+    // Array to push the arrow names.
+    // first one is selected, start moving the 
+    // array =[]
+    // upon each arrowsFalling
+    // push the arrow name into the array
+    // drop the arrows from the array
+    // ensure the array has unique values, left right top bottom
+    // ["leftArrow"]
+    // ["leftArrow", "rightArrow"]
+    // if left is in the array, dont push it again
+    pushedArrows.forEach(el => {el.style.marginTop = count + 'px';})
+
+    // arrowName.style.marginTop = count + 'px';
+  } else if (count > 750) {    
+    arrowName.style.visibility = "hidden"
+
   
   }
-  
+  // keyInput(arrowName)
 }
+
+
+
+// function checkKeypress() {
+//   check current position of arrowsFalling
+//   if arrowsFalling && keyInput === true &&  margin (500-600);
+//     score++
+// } else {
+//   "miss!"
+// }
+
 // function logKey(e,arrowName) {
 //   console.log(arrowName)// if event.code matches(===) the arrow name, success, else, misscon
 //   console.log(e)
@@ -59,13 +81,17 @@ function arrowsFalling(arrowName) {
 // function keyInput(arrowName) {
 // document.addEventListener('keydown', logKey.bind("arrowName"));
 
-
-
-// Nands test code:
+document.addEventListener('keydown', function(e){
+  console.log(randomArrow.id) 
+  console.log(e) 
+  //compare the event key pressed with the arrow id =1
+  // loop ends after 20 times
+})
 
 function keyInput(arrowName) {
   document.addEventListener('keydown', function(arrowName, e){
   console.log(arrowName.id) 
+  console.log(e) 
   //compare the event key pressed with the arrow id =1
   }.bind(this, arrowName));
  }
@@ -78,8 +104,7 @@ function keyInput(arrowName) {
 //  }
 
 function generateRandomArrow() {
-
-var randomArrow = Math.floor(Math.random() * arrowArray.length);
+   randomArrow = Math.floor(Math.random() * arrowArray.length);
      return arrowArray[randomArrow]
 
 }
