@@ -12,9 +12,9 @@ let count = 0
 var score = 0
 // start at random position
 leftGameArrowPos = -100 //(have a random number to begin with)
-rightGameArrowPos = -180
-upGameArrowPos = -150
-downGameArrowPos = -200
+rightGameArrowPos = -480
+upGameArrowPos = -250
+downGameArrowPos = -320
 
 leftGameArrow.style.marginTop = leftGameArrowPos + "px"
 rightGameArrow.style.marginTop = rightGameArrowPos + "px"
@@ -45,7 +45,7 @@ function newGame() {
         // pass randomArrow to arrowsFalling function
         // randomArrow = generateRandomArrow() // Here, need logic to generate a random position for randomPosition var
         arrowsFalling()
-      }, 50);
+      }, 300);
   
 }
 
