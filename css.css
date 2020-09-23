@@ -27,7 +27,13 @@ h1 {
   color: white;
   text-align: center;
   padding-bottom: 15px;
+<<<<<<< HEAD
   z-index: 90;
+=======
+  position: relative;
+  z-index: 1;
+
+>>>>>>> f3ae36bcd61ad43f9aea4a28dddcec9e7c3fe40b
 }
 
 /* home page footer____________________________________________________ */
