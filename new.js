@@ -56,9 +56,7 @@ function arrowsFalling() {
   //   pos += 20
   //   // console.log(pos)
   // })
-  if (count < 700) {
-    
-
+  // if (count < 700){
   leftGameArrowPos += 20
   rightGameArrowPos += 20
   upGameArrowPos += 20
@@ -70,10 +68,21 @@ function arrowsFalling() {
   // console.log("leftArrow", leftGameArrowPos )
   // console.log(leftStaticArrow.style.marginTop)
   // at 610 px left arrow is winning
-} else if(count > 700) {
-  arrowName.style.visibility = "hidden"
-}
-}
+  console.log(leftGameArrowPos)
+  // }
+  if (leftGameArrowPos > 650) {
+    leftGameArrow.style.visibility = "hidden"
+  }
+  if (rightGameArrowPos > 650) {
+    rightGameArrow.style.visibility = "hidden"
+  }
+  if (upGameArrowPos > 650) {
+    upGameArrow.style.visibility = "hidden"
+  }
+  if (downGameArrowPos > 650) {
+    downGameArrow.style.visibility = "hidden"
+  }
+} 
 // function arrowsFalling(arrowName) {
 //   // arrowObj.arrowName += 20
 //     pushedArrows.push(arrowName)
