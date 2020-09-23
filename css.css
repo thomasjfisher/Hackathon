@@ -6,6 +6,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   
+  
 }
 
 /* Home page header text ____________________________________________*/
@@ -16,6 +17,7 @@ h1 {
   color: white;
   padding-top: 25px; 
   padding-bottom: 25px;
+
 }
 
 /* home page header background ________________________________________*/ 
@@ -25,6 +27,7 @@ h1 {
   color: white;
   text-align: center;
   padding-bottom: 15px;
+  z-index: 19;
 }
 
 /* home page footer____________________________________________________ */
