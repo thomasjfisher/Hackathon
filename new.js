@@ -4,11 +4,25 @@ var leftGameArrow = document.getElementById("fallingLeft")
 var rightGameArrow = document.getElementById("fallingRight")
 var upGameArrow = document.getElementById("fallingUp")
 var downGameArrow = document.getElementById("fallingDown")
+var leftStaticArrow = document.getElementById("staticArrowLeft")
+// console.log(leftStaticArrow.style.marginTop)
+
 var randomArrow 
 let count = 0
 var score = 0
+// start at random position
+leftGameArrowPos = -50 //(have a random number to begin with)
+rightGameArrowPos = -80
+upGameArrowPos = -100
+downGameArrowPos = -150
+
+leftGameArrow.style.marginTop = leftGameArrowPos + "px"
+rightGameArrow.style.marginTop = rightGameArrowPos + "px"
+upGameArrow.style.marginTop = upGameArrowPos + "px"
+downGameArrow.style.marginTop = downGameArrowPos + "px"
 var arrowArray = [leftGameArrow, rightGameArrow, upGameArrow, downGameArrow];
 var pushedArrows = []
+var arrowObj ={}
 // let startNewGame = document.getElementById("newGameButton")
 
 // var currentPositionX = 0;
@@ -29,39 +43,61 @@ function newGame() {
     setInterval(function(){ 
         // choose randomArrow
         // pass randomArrow to arrowsFalling function
-        randomArrow = generateRandomArrow()
-        arrowsFalling(randomArrow)
+        // randomArrow = generateRandomArrow() // Here, need logic to generate a random position for randomPosition var
+        arrowsFalling()
       }, 500);
   
 }
 
-function arrowsFalling(arrowName) {
-    pushedArrows.push(arrowName)
-    console.log(pushedArrows)
-    if (count < 749){
-    count += 20
-    // check if it is the first arrow, then we can retain whatever we have got (arrow name passed)
-    // var that keeps track of arrow count
-    // Array to push the arrow names.
-    // first one is selected, start moving the 
-    // array =[]
-    // upon each arrowsFalling
-    // push the arrow name into the array
-    // drop the arrows from the array
-    // ensure the array has unique values, left right top bottom
-    // ["leftArrow"]
-    // ["leftArrow", "rightArrow"]
-    // if left is in the array, dont push it again
-    pushedArrows.forEach(el => {el.style.marginTop = count + 'px';})
+function arrowsFalling() {
+  // Object.entries(randomPosition).forEach((arrow, pos) => {
+  //   // arrow.style.top = pos
+  //   console.log(arrow)
+  //   pos += 20
+  //   // console.log(pos)
+  // })
+  leftGameArrowPos += 20
+  rightGameArrowPos += 20
+  upGameArrowPos += 20
+  downGameArrowPos += 20
+  leftGameArrow.style.marginTop = leftGameArrowPos + "px"
+  rightGameArrow.style.marginTop = rightGameArrowPos + "px"
+  upGameArrow.style.marginTop = upGameArrowPos + "px"
+  downGameArrow.style.marginTop = downGameArrowPos + "px"
+  // console.log("leftArrow", leftGameArrowPos )
+  // console.log(leftStaticArrow.style.marginTop)
+  // at 610 px left arrow is winning
 
-    // arrowName.style.marginTop = count + 'px';
-  } else if (count > 750) {    
-    arrowName.style.visibility = "hidden"
+}
+
+// function arrowsFalling(arrowName) {
+//   // arrowObj.arrowName += 20
+//     pushedArrows.push(arrowName)
+//     // console.log(pushedArrows)
+//     if (count < 749){
+//     count += 20
+//     // check if it is the first arrow, then we can retain whatever we have got (arrow name passed)
+//     // var that keeps track of arrow count
+//     // Array to push the arrow names.
+//     // first one is selected, start moving the 
+//     // array =[]
+//     // upon each arrowsFalling
+//     // push the arrow name into the array
+//     // drop the arrows from the array
+//     // ensure the array has unique values, left right top bottom
+//     // ["leftArrow"]
+//     // ["leftArrow", "rightArrow"]
+//     // if left is in the array, dont push it again
+//     pushedArrows.forEach(el => {el.style.marginTop = count + 'px';})
+//     // pushedArrows.forEach(el => {el.style.top = yAxisFallingLeft + "px"}) //Jordons Code
+//     // arrowName.style.marginTop = count + 'px';
+//   } else if (count > 750) {    
+//     arrowName.style.visibility = "hidden"
 
   
-  }
-  // keyInput(arrowName)
-}
+//   }
+//   // keyInput(arrowName)
+// }
 
 
 
@@ -81,17 +117,66 @@ function arrowsFalling(arrowName) {
 // function keyInput(arrowName) {
 // document.addEventListener('keydown', logKey.bind("arrowName"));
 
-document.addEventListener('keydown', function(e){
-  console.log(randomArrow.id) 
-  console.log(e) 
+
+// Jordons Code
+// yAxisStaticLeft = document.getElementById("staticArrowLeft").getBoundingClientRect().y
+// console.log(yAxisStaticLeft)
+// yAxisStaticUp = document.getElementById("staticArrowUp").getBoundingClientRect().y
+// console.log(yAxisStaticUp)
+// yAxisStaticDown = document.getElementById("staticArrowDown").getBoundingClientRect().y
+// console.log(xAxisStaticDown)
+// xAxisStaticRight = document.getElementById("staticArrowRight").getBoundingClientRect().y
+// console.log(xAxisStaticRight)
+// yAxisFallingLeft = document.getElementById("fallingLeft").getBoundingClientRect().x
+// console.log(yAxisFallingLeft)
+// all y axis 751
+
+
+// if moving arrow === still arrow, delete
+// +=1 to score
+// else -= 1 life
+
+// window.addEventListener('keydown', function(e){
+//   // console.log(randomArrow.id) 
+//   // console.log(e) 
+//   switch(e.key) {
+
+//     case "ArrowLeft":
+//       console.log(yAxisFallingLeft)
+//     break;
+    
+//     case "ArrowRight":
+
+//     break;
+    
+//     case "ArrowUp":
+
+//     break;
+    
+//     case "ArrowDown":
+//     break;
+    
+//   }
+//   console.log(e.key)
+//---------------------------------------------------- JC
+
+  // compare the margin and assign yes no values
+//   // if arrow
+//   if (randomArrow.id >=560 && <= 620) {
+// // console.log()
+//   } else {
+    // display MISS!
+  // }
+  // successful push 560-620 yes!
+// 540-640  First touch / last touch
   //compare the event key pressed with the arrow id =1
   // loop ends after 20 times
-})
+// })
 
 function keyInput(arrowName) {
   document.addEventListener('keydown', function(arrowName, e){
-  console.log(arrowName.id) 
-  console.log(e) 
+  // console.log(arrowName.id) 
+  // console.log(e) 
   //compare the event key pressed with the arrow id =1
   // loop ends after 20 times
   }.bind(this, arrowName));
