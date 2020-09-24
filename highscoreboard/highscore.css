@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+  list-style: none;
+  font-family: 'Press Start 2P', cursive;
+  font
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: antiquewhite;
+}
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+.lboard_section{
+  width: 500px;
+  height: 400px;
+  margin: 100px auto 0;
+  background: rgb(233,59,241);
+  background: linear-gradient(0deg, rgba(233,59,241,1) 0%, rgba(247,165,231,1) 0%, rgba(249,178,175,1) 42%, rgba(255,222,150,1) 100%);
+  border-radius: 45px;
+  padding: 25px 40px;
+  position: relative;
+}
+
+.lboard_section ul{
+  display: flex;
+}
+
+.lboard_section ul li{
+  margin-right: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  color: white;
+  text-shadow: 1px 1px 2px white, 0 0 15px pink, 0 0 5px palevioletred;
+}
+
+.lboard_section ul li:hover
+.lboard_section ul li.active{
+  color: black;
+  text-shadow: 1px 1px 2px white, 0 0 15px pink, 0 0 5px palevioletred;
+}
+
+.lboard_wrap{
+  position: relative;
+  top: 70px;
+  left: 0px;
+  background: burlywood;
+  width: 70%;
+}
+
+.lboard_wrap .lboard_item{
+  padding: 20px;
+}
+
+.lboard_wrap .lboard_item .lboard_mem{
+  display: flex;
+  align-items: center;
+  padding: 5px 10;
+  border-bottom: 1px solid;
+}
+
+.lboard_wrap .lboard_item .lboard_mem:first-child{
+  padding-top: 0;
+}
+
+.lboard_wrap .lboard_item .lboard_mem:last-child{
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.lboard_wrap .lboard_mem .img{
+  width: 50px;
+}
+
+.lboard_wrap .lboard_mem .img img{
+  display: block;
+  width: 100%;
+}
+
+.lboard_wrap .lboard_item .name_bar{
+  margin: 0 20px;
+  width: calc(100% - 150px);
+}
+
+.lboard_wrap .lboard_item .name_bar p{
+  color: black;
+}
+
+.lboard_wrap .lboard_item .name_bar p span{
+  margin-right: 5px;
+}
+
+.lboard_wrap .lboard_item .points{
+  color: white;
+  text-shadow: 1px 1px 2px white, 0 0 15px red, 0 0 5px black;
+
+  /* padding-right: 0px;
+  padding-left: 200px; */
+}
+
+.lboard_wrap .lboard_item .bar_wrap{
+  height: 5px;
+  width: 100%;
+  background: white;
+  border-radius: 5px;
+  margin-top: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.lboard_wrap .lboard_item .bar_wrap .inner_bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  
+}
+/* my coding bg below */
+/* .lb-background{
+  width: 500px;
+  height: 400px;
+  margin: 100px auto 0;
+  border-radius: 5px;
+  padding: 25px 40px;
+  background-image: url(./coding_bg.jpg);
+} */
