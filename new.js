@@ -242,9 +242,3 @@ function generateRandomArrow() {
 // - stop game after 1:00 minute?
 
 // position the arrrow
-
-
-
-
-
-
